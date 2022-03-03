@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile</title>
+    <link rel="stylesheet" href="stylesheets/user.css">
+    <link rel="stylesheet" href="stylesheets/checkin.css">
+    <link rel="stylesheet" href="stylesheets/profile.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="javascripts/profilev.js" defer></script>
+    <script src="javascripts/profile.js"></script>
+    </head>
+    <body>
+  <div class="nav">
+        <!-- <a href="./dashboard.html" class="logo"><h1>TrackerAPP</h1></a> -->
+        <div class="logo">
+            <a href="./admin.html"><h1>TrackerAPP</h1></a>
+            </div>
+        <div class="list">
+        <a class = "active" href="./profile-admin.html">Profile</a>
+        <a href="./hotspot-areas.html">Manage Hotspot Areas & Timeframes</a>
+        <a href="./checkin-history.html">View Check-in History</a>
+        <a href="./manage-users&venues.html">Manage Users/Venues</a>
+        <a href="./signup-others.html">Sign-up other Health Officials</a>
+        <a href="./test.html">Sign out</a>
+        </div>
+    </div>
+    </div>
+    <div id="content" class = "content profile">
+        <header>
+                <div class="dash">
+                    <h1>Profile</h1>
+                </div>
+        </header>
+    <main>
+        <div id="first">
+            <p class="info">Profile Type: User</p><br>
+            <p class="info">First Name: {{ name }}</p><br>
+            <p class="info">Last Name: {{ lastname }}</p><br>
+            <p class="info">E-mail: {{ email }}</p><br>
+            <button class = "edit" onclick="makeChanges()">Edit</button>
+            <button class = "edit" onclick="password()">Change Password</button>
+        </div>
+        <div id="changepass" style="display:none;">
+          <form>
+                <label class="info"> Old Password:</label>
+                <input class = "input" type="password" id="username" placeholder = ""><br>
+                <label class="info">New Password: </label>
+                <input class = "input" type="password" id="password" placeholder = ""><br>
+                <label class="info">Confirm Password: </label>
+                <input class = "input" type="password" id="password" placeholder = ""><br>
+        <button class = "edit">Back</button>
+        </form>
+            <button class = "edit">Confirm Password</button>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div id="changes" style="display:none;">
+                <form>
+                <label class = "info">First Name:</label>
+                <input class="input" type="text" id="username" v-model="name" placeholder = ""><br>
+                <label class = "info">Last Name:</label>
+                <input class="input" type="text" id="password" v-model="lastname" placeholder = ""><br>
+                <label class = "info">Email:</label>
+                <input class="input" type="text" id="password" v-model="email" placeholder = ""><br>
+            <button class = "edit">Back</button>
+            </form>
+         <button class = "edit" onclick="save()">Save Changes</button>
+        </div>
+    </main>
+     </div>
+    </body>
+
+</html>

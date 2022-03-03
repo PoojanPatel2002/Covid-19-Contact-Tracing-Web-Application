@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+    <title>Hotspots</title>
+     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="stylesheets/user.css">
+    <link rel="stylesheet" href="stylesheets/hotspotmap.css">
+    <link rel="stylesheet" href="stylesheets/visit.css">
+
+        <script src="javascripts/hotspot-areas.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+    <script src='./javascripts/test.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body onload=getactors()>
+  <div class="nav">
+        <!-- <a href="./dashboard.html" class="logo"><h1>TrackerAPP</h1></a> -->
+        <div class="logo">
+            <a href="./user.html"><h1>TrackerAPP</h1></a>
+            <!--change for specific account-->
+            </div>
+        <div class="list">
+        <a  href="./profile-user.html">Profile</a>
+        <a href="./visit.html">Visit History</a>
+        <a href="./checkin.html">Venue check-in</a>
+        <a class = "active" href="./hotspotmap.html">Map and Hotspot</a>
+        <a href="./test.html">Sign out</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+
+            <header>
+                <div class="dash">
+                    <h1>Map and Hotspot</h1>
+                </div>
+            </header>
+
+            <main>
+                <div class="outermap">
+                <div id='mapid' class="map" style='width: 1000px; height: 500px;'></div>
+                    <script>
+                        var mymap = L.map('mapid').setView([-34.9285,138.6007], 13);
+                        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+                        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                        maxZoom: 18,
+                        id: 'mapbox/streets-v11',
+                        tileSize: 512,
+                        zoomOffset: -1,
+                        accessToken: 'pk.eyJ1IjoiZGF2aW5jaTI5MTAiLCJhIjoiY2tvbndrbXk4MDR2dTJ2cXNjYmowaDFjNyJ9.6LsU5ZPL2OEp4BH6tZmayA'
+                        }).addTo(mymap);
+
+                        var circle = L.circle([-34.9485,138.5907], {
+                         color: 'red',
+                         fillColor: '#f03',
+                         fillOpacity: 0.2,
+                        radius: 500
+                        }).addTo(mymap);
+                        circle.bindPopup("Last Updated:, Radius:500m");
+
+                         var circle1 = L.circle([-34.9385,138.5707], {
+                         color: 'red',
+                         fillColor: '#f03',
+                         fillOpacity: 0.2,
+                        radius: 700
+                        }).addTo(mymap);
+                        circle1.bindPopup("Last Updated:, Radius:700m");
+
+                         var circle2 = L.circle([-34.9085,138.6107], {
+                         color: 'red',
+                         fillColor: '#f03',
+                         fillOpacity: 0.2,
+                        radius: 1000
+                        }).addTo(mymap);
+                        circle2.bindPopup("Last Updated:, Radius:1km");
+                    </script>
+                </div>
+
+     <div class="history">
+         <h2>Current Hotspots</h2>
+            <table class="history-table" style="width: 900px">
+                <thead>
+                <tr>
+                    <th>Radius</th>
+                    <th>Time Updated</th>
+                    <th>Location</th>
+                </tr>
+                </thead>
+                <tbody id="tbody">
+
+                </tbody>
+
+            </table>
+        </div>
+            </main>
+    </div>
+</body>
+</html>

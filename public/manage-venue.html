@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="viewport">
+    <title>Manage Venue</title>
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="stylesheets/user.css">
+    <link rel="stylesheet" href="stylesheets/visit.css">
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+    <script src="./javascripts/test.js"></script>
+    </head>
+    <body>
+
+      <div class="nav">
+        <!-- <a href="./dashboard.html" class="logo"><h1>TrackerAPP</h1></a> -->
+        <div class="logo">
+            <a href="./manager.html"><h1>TrackerAPP</h1></a>
+            </div>
+        <div class="list">
+        <a class = "active" href="./profile-manager.html">Profile</a>
+        <a href="./history.html">Venue Check-in History</a>
+        <a href="./manage-venue.html">Manage Venue</a>
+        <a href="./test.html">Sign out</a>
+<!--        <a href="./QR-page.html">QR Code Page</a>
+-->        </div>
+    </div>
+
+    <div class = "content">
+        <header>
+                <div class="dash">
+                    <h1>Manage Venue</h1>
+                </div>
+        </header>
+
+        <main id="main">
+         <div class="outermap">
+                <div class="search">
+                    <button class="right" onclick="addVenues()">Add Venues</button>
+                    <h2 class="searchVenues">Search Venues</h2>
+                    <input type="text" name="search" id="post-search" placeholder="Enter your search terms"  />
+                    <button class="right" onclick="searchPosts()">Search</button>
+                </div>
+
+                <div id="venue-list">
+                    <!--<div class="venue">
+                        </br>
+                        <h2>Venue 1</h2>
+                        <p>Venue Name: </p>
+                        <p>Street Number: </p>
+                        <p>Street Name: </p>
+                        <p>Suburb: </p>
+                        <p>Postcode: </p>
+                    </div>-->
+                </div>
+
+            </main>
+            <section id="ask">
+                <h2>Add a Venue</h2>
+                <input id="name" type="text" name="a" placeholder="Venue Name" /><br />
+                <input id="s_num" type="text" name="b" placeholder="Street Number" /><br />
+                <input id="s_name" type="text" name="c" placeholder="Street Name" /><br />
+                <input id="suburb" type="text" name="d" placeholder="Suburb" /><br />
+                <input id="postcode" type="text" name="e" placeholder="Postcode" /><br />
+                <button onclick="addVenue()">Add Venue</button>
+                <button  onclick="showVenues()">Cancel</button>
+            </section>
+        </div>
+    </div>
+    </body>
+
+</html>

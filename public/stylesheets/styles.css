@@ -1,0 +1,33 @@
+.container{
+    position: absolute;
+    top: 25%;
+    transform: translateY(-50%);
+    left: 80%;
+    transform: translateX(-80%);
+   /* border: 2px solid #146ca4;*/
+    width: 540px;
+    height: 300px;
+    overflow: hidden;
+    background-color: white;
+}
+
+
+.container .box {
+    float:left ; 
+    width:180px; 
+    height:300px; 
+    transition: all .25s ease-in-out;
+    text-align:center;
+    cursor: pointer;
+}
+h2{
+    color: black;
+}
+
+.container .box:hover{
+    background-color: lightgray;
+}
+
+body{
+   background-color: #b3e5fc;
+}

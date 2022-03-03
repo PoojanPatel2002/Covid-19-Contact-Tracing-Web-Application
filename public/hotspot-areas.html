@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="viewport">
+    <title>Hotspot Areas & Times</title>
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="stylesheets/user.css">
+        <link rel="stylesheet" href="stylesheets/hotspotmap.css">
+    <link rel="stylesheet" href="stylesheets/visit.css">
+
+    <script src="javascripts/hotspot-areas.js"></script>
+
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+    </head>
+    <body>
+
+      <div class="nav">
+        <!-- <a href="./dashboard.html" class="logo"><h1>TrackerAPP</h1></a> -->
+        <div class="logo">
+            <a href="./admin.html"><h1>TrackerAPP</h1></a>
+            </div>
+        <div class="list">
+        <a  href="./profile-admin.html">Profile</a>
+        <a class = "active" href="./hotspot-areas.html">Manage Hotspot Areas & Timeframes</a>
+        <a href="./checkin-history.html">View Check-in History</a>
+        <a href="./manage-users&venues.html">Manage Users/Venues</a>
+        <a href="./signup-others.html">Sign-up other Health Officials</a>
+        <a href="./test.html">Sign out</a>
+        </div>
+    </div>
+
+    <div class = "content">
+        <header>
+                <div class="dash">
+                    <h1>Manage Hotspot Areas & Timeframes</h1>
+                </div>
+        </header>
+
+    <main>
+     <div class="outermap">
+        <div id='mapid' class="map" style='width: 1000px; height: 500px;'></div>
+            <script>
+
+            var mymap = L.map('mapid').setView([-34.9285,138.6007], 13);
+                L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                maxZoom: 18,
+                id: 'mapbox/streets-v11',
+                tileSize: 512,
+                zoomOffset: -1,
+                accessToken: 'pk.eyJ1IjoiZGF2aW5jaTI5MTAiLCJhIjoiY2tvbndrbXk4MDR2dTJ2cXNjYmowaDFjNyJ9.6LsU5ZPL2OEp4BH6tZmayA'
+                }).addTo(mymap);
+                </script>
+                </div>
+
+
+                <div class="btndiv">
+                    <button class="edit" onclick="editVenue()">Edit Hotspot</button>
+                    <button id="add" class="add" onclick="addVenue()">Add Hotspot</button>
+                </div>
+                <div id="editDiv" style="display:none;">
+                    <h3>Click a marker on map and edit</h3>
+                    <form id="marker-edit">
+                        <input id="deleteMark" type="radio" value="Delete" name = "action" onclick="removeCircle()">
+                        <label for="Delete">Delete</label>
+                        <input id="locationMark" type="radio" value="Change Location" name = "action">
+                        <label for="Change Location">Change Location</label>
+                        <input id="radiusMark" type="radio" value="Change Radius" name = "action">
+                        <label for="Change Radius">Change Radius</label>
+                    </form>
+
+                    <div id="location" style="display:none;">
+                        <h5>Drag Marker to different location and click marker to confirm</h5>
+                    </div>
+
+                    <div id="editRadiusDiv">
+                        <form id="radius-edit">
+                        <input id="editMark" type="text" id = "code" placeholder="enter radius" onchange="editRadius()">
+                        <button  class="addBtn" type="button">Edit</button>
+                        </form>
+                    </div>
+
+                </div>
+
+                <div id="addDiv" style="display:none;">
+                        <h3>Add a marker on map and radius</h3>
+                    <form id="marker-add">
+                        <input id="addMark" type="text" id = "code" onchange="addRadius()" placeholder="enter radius">
+                    <button  class="addBtn" type="button">Add</button>
+                    </form>
+                </div>
+
+     <div class="history">
+         <h2>Current Hotspots</h2>
+            <table id="myTable" class="history-table" style="width: 900px">
+                <thead>
+                <tr>
+                    <th>Radius</th>
+                    <th>Time Updated</th>
+                    <th>Location</th>
+                </tr>
+                </thead>
+                <tbody id="tbody">
+
+                </tbody>
+
+            </table>
+        </div>
+        <main>
+    </div>
+    </body>
+
+</html>

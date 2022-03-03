@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="viewport">
+    <title>Check-in</title>
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="stylesheets/user.css">
+    <link rel="stylesheet" href="stylesheets/checkin.css">
+
+     <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+    </head>
+    <body>
+  <div class="nav">
+        <!-- <a href="./dashboard.html" class="logo"><h1>TrackerAPP</h1></a> -->
+        <div class="logo">
+            <a href="./user.html"><h1>TrackerAPP</h1></a>
+            </div>
+        <div class="list">
+        <a  href="./profile-user.html">Profile</a>
+        <a href="./visit.html">Visit History</a>
+        <a class = "active" href="./checkin.html">Venue check-in</a>
+        <a href="./hotspotmap.html">Map and Hotspot</a>
+        <a href="./test.html">Sign out</a>
+        </div>
+    </div>
+    </div>
+    <div class = "content">
+        <header>
+                <div class="dash">
+                    <h1>Venue Check-in</h1>
+                </div>
+        </header>
+
+        <main>
+
+            <div class="outermap">
+            <div id='map' class="map" style='width: 1000px; height: 500px;'></div>
+
+            <div class="checkin">
+                <form>
+                    <input type="text" id = "code" placeholder="Enter Code Here">
+                    <input type="submit" value="Check In">
+                </form>
+            </div>
+
+            <script>
+    	       mapboxgl.accessToken = 'pk.eyJ1IjoiZGF2aW5jaTI5MTAiLCJhIjoiY2tvbndrbXk4MDR2dTJ2cXNjYmowaDFjNyJ9.6LsU5ZPL2OEp4BH6tZmayA';
+                var map = new mapboxgl.Map({
+                container: 'map', // container id
+                style: 'mapbox://styles/mapbox/streets-v11',
+                center: [138.6007, -34.9285], // starting position
+                zoom: 10 // starting zoom
+                });
+
+                // Add geolocate control to the map.
+                map.addControl(
+                new mapboxgl.GeolocateControl({
+                positionOptions: {
+                enableHighAccuracy: true
+                },
+                trackUserLocation: true
+                })
+                );
+            </script>
+       </div>
+        <main>
+    </div>
+    </body>
+
+</html>

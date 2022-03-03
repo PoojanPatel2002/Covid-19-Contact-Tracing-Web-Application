@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="viewport">
+    <title>History</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="stylesheets/user.css">
+    <link rel="stylesheet" href="stylesheets/visit.css">
+    <link rel="stylesheet" href="stylesheets/checkin.css">
+    <script src="javascripts/test.js"></script>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+    </head>
+    <body>
+
+    <div class="nav">
+        <!-- <a href="./dashboard.html" class="logo"><h1>TrackerAPP</h1></a> -->
+        <div class="logo">
+            <a href="./manager.html"><h1>TrackerAPP</h1></a>
+            </div>
+        <div class="list">
+        <a class = "active" href="./profile-manager.html">Profile</a>
+        <a href="./history.html">Venue Check-in History</a>
+        <a href="./manage-venue.html">Manage Venue</a>
+        <a href="./test.html">Sign out</a>
+<!--        <a href="./QR-page.html">QR Code Page</a>
+--> </div>
+    </div>
+
+    <div class = "content">
+        <header>
+                <div class="dash">
+                    <h1>Venue Check-in History</h1>
+                </div>
+        </header>
+
+        <main id="main">
+         <div class="outermap">
+            <div class="dropdown">
+                <button class="dropbtn">Dropdown</button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="showVenueDetails()">Venue 1 Name</a>
+                    <a href="#" onclick="showVenueDetails()">Venue 2 Name</a>
+                    <a href="#" onclick="showVenueDetails()">Venue 3 Name</a>
+                </div>
+                <div id="venues">
+ <!--               <h2>Venue Name</h2>
+                    <table id="myTable" class="history-table" style="width: 900px">
+                        <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Family Name</th>
+                            <th>Email</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tbody">
+
+                        </tbody>
+                    </table>-->
+                </div>
+            </div>
+        <main>
+    </div>
+    </body>
+
+</html>

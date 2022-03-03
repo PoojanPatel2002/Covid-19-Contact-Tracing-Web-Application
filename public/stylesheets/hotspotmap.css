@@ -1,0 +1,117 @@
+.outermap{
+    height:500px;
+    width: 1000px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.dash {
+    font-size: 20px;
+    width: 100%;
+    height: 100px;
+    padding-top: 20px;
+}
+
+.main {
+    margin-top: 0px;
+}
+
+hr {
+    margin-top: 10px;
+    width: 1000px;
+}
+
+/*.legend-div{*/
+/*    margin-left: 20px;*/
+/*    margin-top: 20px;*/
+/*    display: inline-block;*/
+/*    position: absolute;*/
+/*}*/
+
+.legend {
+    list-style:none;
+    padding-left: 20px;
+}
+
+.legend li {
+    float: left;
+    margin-right: 10px;
+    font-size: 25px;
+    padding: 10px;
+}
+
+.legend span {
+    border: 1px solid #ccc;
+    float: left;
+    width: 12px;
+    height: 12px;
+    margin: 10px;
+}
+
+/* your colors */
+
+.legend .lone {
+    background-color: lightpink;
+}
+
+.legend .one {
+    background-color: #ff94ca;
+}
+
+.legend .two {
+    background-color: hotpink;
+
+}
+.legend .three {
+    background-color: deeppink;
+}
+
+.legend .four {
+    background-color: red;
+}
+
+.legend .five {
+    background-color: #dd0000;
+}
+
+
+.list a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+
+
+/*Parth Code for Hotspot-areas.html*/
+.btndiv {
+    width: 1000px;
+    height: 100px;
+
+    align-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.edit {
+    font-size: 130%;
+}
+
+.add {
+    font-size: 130%;
+}
+
+#editDiv{
+    width:1000px;
+    font-size : 110%;
+    text-align: center;
+    /*display: none;*/
+}
+
+#addDiv{
+    width:1000px;
+    text-align: center ;
+    font-size: 110%;
+    /*display: none;*/
+}

@@ -1,0 +1,30 @@
+main{
+    padding-top: 3vh;
+}
+.profile{
+         background-image: url("/images/face.jpg") ;
+        background-size: cover;
+}
+.input{
+    margin-top:2vh;
+}
+.info{
+    padding-top: 2vh;
+    font-size: 120%;
+}
+
+body{
+ background-color:#dce4e6;
+}
+
+.edit{
+    float: left;
+    background-color: lightgrey;
+    font-size: 115%;
+    margin-right: 20px;
+}
+.edit:hover{
+    background-color: black;
+    color: white;
+    transition: none;
+}

@@ -1,0 +1,107 @@
+.dash {
+    font-size: 20px;
+    width: 100%;
+    height: 100px;
+    padding-top: 20px;
+}
+
+.main {
+    margin-top: 0px;
+}
+
+hr {
+    margin-top: 10px;
+    width: 1000px;
+}
+
+.content{
+    margin-left: 370px;
+    width: 100wh;
+    height: 100vh;
+}
+
+.history{
+    width: 410px;
+    height: 300px;
+    float: right;
+    margin-right: 70px;
+    margin-top: 200px;
+}
+
+
+.history-table td{
+    padding-bottom: 5px;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.history-table th{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: lightgray;
+
+}
+
+.history-table tbody{
+    height: 10px;
+    width: 100%;
+    overflow: auto;
+}
+
+.map {
+    margin-left: 150px ;
+    border-style: solid;
+}
+
+.checkin {
+    padding-top: 30px;
+
+}
+
+input[type=text] {
+
+    width: 700px;
+    margin-left: 150px;
+    display: inline-block;
+    border:1px solid black;
+    box-sizing: border-box;
+
+}
+
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 12px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 110px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block; font-size: 12px;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+

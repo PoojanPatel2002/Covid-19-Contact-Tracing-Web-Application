@@ -1,0 +1,16 @@
+input[type="text"], textarea {
+    width: 60%;
+    margin-bottom: 0.5em;
+}
+
+input[type="password"], textarea {
+    width: 60%;
+    margin-bottom: 0.5em;
+}
+
+
+textarea {
+    min-height: 20vh;
+    padding: 0.5em;
+}
+

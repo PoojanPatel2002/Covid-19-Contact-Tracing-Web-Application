@@ -1,0 +1,118 @@
+.dash {
+    font-size: 20px;
+    width: 100%;
+    height: 100px;
+    padding-top: 20px;
+}
+
+.main {
+    margin-top: 0px;
+}
+
+hr {
+    margin-top: 10px;
+    width: 1000px;
+}
+
+.content{
+    margin-left: 370px;
+    width: 100wh;
+    height: 100vh;
+}
+
+.history{
+    width: 410px;
+    height: 300px;
+    margin-top: 5%;
+}
+
+
+.history-table td{
+    padding-bottom: 5px;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.history-table th{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: lightgray;
+
+}
+
+.history-table tbody{
+    height: 200px;
+    width: 100%;
+    overflow: auto;
+}
+
+.Info {
+  position: absolute;
+  font-family: sans-serif;
+  padding: 5px;
+  width: 30%;
+  border: 2px solid black;
+  font-size: 14px;
+  color: #222;
+  background-color: #fff;
+  border-radius: 3px;
+    z-index: 1;
+}
+
+.popup {
+max-width: 400px;
+font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+
+
+
+/*manage-venue css*/
+* {
+    box-sizing: border-box;
+}
+
+main, section {
+    padding-right: 1em;
+}
+
+.searchVenues {
+    display: block;
+    font-size: 1.5em;
+    margin-block-end: 0.83em;
+    font-weight: bold;
+}
+
+button {
+    border: hidden;
+    border-radius: 0.3em;
+    padding: 0.6em;
+    margin: 0 0.2em;
+    color: black;
+}
+
+button:hover {
+    background-color: rgb(0, 120, 230);
+}
+
+.right {
+    float: right;
+}
+
+input[type="text"], textarea {
+    width: 60%;
+    margin-bottom: 0.5em;
+}
+
+
+textarea {
+    min-height: 20vh;
+    padding: 0.5em;
+}
+
+section {
+    display: none;
+}
+
